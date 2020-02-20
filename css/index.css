@@ -194,6 +194,8 @@ header a:hover {
 .content {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 @media (max-width: 500px) {
   .content {
@@ -212,7 +214,21 @@ header a:hover {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.left .intro,
+.left .skills-content,
+.left .my-work,
+.left #contact-form {
+  border-top: 2px solid #85A59F;
+  padding: 2%;
+  margin: 20px;
+}
 .right {
   flex-direction: column;
   flex-wrap: wrap;
+}
+.right .current-job,
+.right .current-school {
+  border-top: 2px solid #85A59F;
+  padding: 2%;
+  margin: 20px;
 }

@@ -122,6 +122,8 @@ header{
 .content{
 	display: flex;
 	justify-content: space-between;
+	padding: 20px 0;
+	margin: 20px 0;
 
 	@media (max-width: 500px){
 		flex-direction: column;
@@ -139,12 +141,22 @@ header{
 
 .left{
 	flex-direction: column;
-	
 	flex-wrap: wrap;
+	
+
+	.intro, .skills-content, .my-work, #contact-form{
+		.border();
+		margin: 20px;
+	}
 }
 
 .right{
 	flex-direction: column;
-	
 	flex-wrap:wrap; 
+
+	.current-job, .current-school{
+		.border();
+		margin: 20px;
+	}
+
 }
