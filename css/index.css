@@ -168,6 +168,12 @@ h5 {
   font-size: 2rem;
   font-family: 'Raleway', sans-serif;
 }
+ul li {
+  line-height: 2rem;
+}
+p {
+  line-height: 2rem;
+}
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -191,6 +197,12 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .content {
   display: flex;
   justify-content: space-between;
@@ -200,12 +212,14 @@ header a:hover {
 @media (max-width: 500px) {
   .content {
     flex-direction: column;
+    margin: 10px 2.5%;
+    align-items: center;
   }
 }
 .content section {
   width: 45%;
 }
-@media (max-width500px) {
+@media (max-width: 500px) {
   .content section {
     width: 90%;
   }
