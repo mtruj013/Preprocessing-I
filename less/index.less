@@ -75,9 +75,10 @@ img{
 	border-top: 2px solid @accent-color;
 	padding: 2%;
 }
-.center(){
-	display: flex;
-	justify-content: center;
+
+.column(){
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 html{
@@ -165,9 +166,7 @@ header{
 
 
 .left{
-	flex-direction: column;
-	flex-wrap: wrap;
-	
+	.column();
 
 	.intro, .skills-content, .my-work, #contact-form{
 		.border();
@@ -177,8 +176,7 @@ header{
 }
 
 .right{
-	flex-direction: column;
-	flex-wrap:wrap; 
+	.column();
 
 	.current-job, .current-school{
 		.border();
