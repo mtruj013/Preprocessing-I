@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: @main-font;
 }
 ol, ul {
 	list-style: none;
@@ -57,3 +58,129 @@ html, body {
     height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lusitana|Raleway&display=swap');
+
+@main-font: 'Lusitana', serif;
+@heading-font: 'Raleway', sans-serif;
+@main-color: #2F2518;
+@accent-color: #85A59F;
+
+img{
+	width: 100%;
+	height: 35vh;
+}
+
+//Mixins
+.border(){
+	border-top: 2px solid @accent-color;
+	padding: 2%;
+}
+
+.column(){
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+body{
+	font-size: 1.6rem;
+
+}
+
+h1, h2, h3, h4, h5 {
+	font-size: 2rem;
+	font-family:@heading-font;
+  }
+
+  ul li {
+	line-height: 2rem;
+  }
+
+  p{
+	  line-height: 2rem;
+  }
+
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	margin: 20px 0;
+
+	h1{
+		font-size: 2rem;
+	}//this closes h1
+
+	a {
+		text-decoration: none;
+		color: @main-color;
+		margin: 5px;
+		font-size: 1.8rem;
+		font-family: @heading-font;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}//this closes the nav links
+	
+	@media (max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+	}
+}//this closes the header
+
+
+.content{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	margin: 20px 0;
+
+	@media (max-width: 500px){
+		flex-direction: column;
+		margin: 10px 2.5%;
+		align-items: center;
+
+		
+	}//this closes media q for content div for mobile
+
+	section{
+		width: 45%;
+
+		@media (max-width: 500px){
+			
+			width: 90%;
+
+		}
+		
+		}//this closes section media q for mobile
+	}//this closes content container
+	
+
+
+.left{
+	.column();
+
+	.intro, .skills-content, .my-work, #contact-form{
+		.border();
+		margin: 20px;
+		}
+
+}
+
+.right{
+	.column();
+
+	.current-job, .current-school{
+		.border();
+		margin: 20px;
+	}
+
+}
